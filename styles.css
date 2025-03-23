@@ -5,8 +5,8 @@
     --gap-sm: calc(var(--gap) * 0.5);
     --gap-lg: calc(var(--gap) * 1.5);
     --gap-xl: calc(var(--gap) * 2);
-    --color-primary: #34547a;
-    --color-gray-light: #eeeff1;
+    --color-primary: #34547A;
+    --color-gray-light: #EEEFF1;
     --color-secondary: #727272;
     --color-white: #ffffff;
 }
@@ -17,62 +17,66 @@
     padding: 0;
 }
 
+p {
+    line-height: 164%;
+  }
+
 body {
     font-family: 'Roboto', sans-serif;
 }
 
-header {
+.header {
     background-color: var(--color-gray-light);
     padding: 2% 5%;
     height: auto;
     padding-left: 20%;
 }
 
-header > div {
+.header__container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     margin-left: 0;
 }
 
-nav ul {
+.nav__list {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
 }
 
-.nav_element {
-    margin: 2rem 2rem 1rem 0; 
+.nav__item {
+    margin: 2rem 4rem 1rem 0;
 }
 
-nav ul li a {
+.nav__link {
     text-decoration: none;
     color: #333;
 }
 
-.nav_element.blue a {
+.nav__item--blue .nav__link {
     color: var(--color-primary);
 }
 
-.design {
+.header__design.design {
     margin-top: 10vh;
     text-align: left;
     max-width: var(--container-secondary);
 }
 
-.design h2 {
+.design__title {
     margin: 2rem 0;
     font-size: 2.5rem;
     font-weight: 500;
 }
 
-.design p {
+.design__text {
     margin-top: 2rem;
     font-size: 1rem;
     color: var(--color-secondary);
 }
 
-.design button {
+.design__button {
     margin: 2rem 0 5vh;
     background-color: var(--color-primary);
     padding: 1rem 2rem;
@@ -90,13 +94,19 @@ nav ul li a {
     display: flex;
     flex-direction: column;
     text-align: center;
-    min-height: 40vh;
+    min-height: 29vh;
     justify-content: center;
     align-items: center;
     padding: 5% 0;
 }
 
-.about p {
+.about__title {
+    margin: 2rem 0;
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.about__text {
     margin-top: 1.5rem;
     color: var(--color-secondary);
 }
@@ -105,25 +115,25 @@ nav ul li a {
     color: var(--color-white);
     display: flex;
     background-color: var(--color-primary);
-    min-height: 20vh;
+    min-height: 16vh;
     justify-content: center;
     align-items: center;
-    gap: 10rem;
+    gap: 8rem;
     flex-wrap: wrap;
 }
 
-.info-block {
+.info__block.info-block {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.info-block__text {
-    margin-left: 0.8rem;
-    margin: 5px;
+.info-block__text-container {
+    position: relative;
+    left: 20px;   
 }
 
-.info img {
+.info-block__image {
     width: 40px;
     height: 40px;
 }
@@ -134,36 +144,33 @@ nav ul li a {
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding: 5% 0;
+    padding: 5% 0 1%;
 }
 
-.work-info {
-    margin: 4% 0;
-}
-
-.work-info h2 {
+.work__title {
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
 }
 
-.work-info p {
+.work__text {
     color: var(--color-secondary);
     font-size: 0.9rem;
+    margin-bottom: 57px;
 }
 
-.picture-container {
+.work__picture-container.picture-container {
     margin-bottom: 4%;
     max-width: 100%;
     position: relative;
 }
 
-.picture-container img:first-child {
+.picture-container__image {
     max-width: 55%;
     height: auto;
     filter: brightness(0.4);
 }
 
-.play-button {
+.picture-container__play-button.play-button {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -172,53 +179,49 @@ nav ul li a {
     cursor: pointer;
 }
 
-footer {
+.footer {
     display: flex;
     color: var(--color-white);
-    min-height: 15vh;
+    min-height: 10vh;
     background-color: var(--color-primary);
     padding: 0 5%;
     align-items: center;
     padding-left: 20%;
 }
 
-footer > div {
+.footer__container {
     margin-left: 0;
 }
 
-.name {
+.footer__name {
     font-size: 1.2rem;
 }
 
-.rights {
+.footer__rights {
     margin-top: 0.8rem;
     font-size: 0.7rem;
 }
 
-.blue {
-    color: var(--color-primary);
-}
-
-@media (max-width: 768px) {
-    header > div {
+@media (max-width: 375px) {
+    .header__container {
         flex-direction: column;
         align-items: center;
     }
 
-    nav ul {
+    .nav__list {
         flex-direction: column;
         align-items: center;
     }
 
-    .nav_element {
+    .nav__item {
         margin: 1rem 0;
     }
 
-    .design {
+    .header__design.design {
         text-align: center;
     }
 
-    .design h2 {
+    .design__title {
         font-size: 1.8rem;
     }
 
@@ -226,7 +229,7 @@ footer > div {
         gap: 1rem;
     }
 
-    footer {
+    .footer__container {
         flex-direction: column;
         align-items: center;
         padding-left: 5%;
