@@ -63,7 +63,7 @@ nav {
     color: #000000;
 }
 
-.nav__item--blue .nav__link {
+.nav__item--current .nav__link {
     color: var(--color-primary);
     font-weight: 500;
 }
